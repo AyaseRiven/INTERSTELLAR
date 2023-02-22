@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
 }
+require('dotenv').config()
 
 module.exports = {
   // images: {
@@ -9,18 +10,10 @@ module.exports = {
   //     'images.unsplash.com',
   //   ]
   // },
-
-  // rewrites: async () => nextI18NextRewrites(localeSubpaths),
-
-  // env:{
-  //   API_URL : process.env.API_URL,
-  //   IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
-  // },
-  // publicRuntimeConfig:{
-  //   API_URL : process.env.API_URL,
-  //   IMAGES_DOMAIN: process.env.IMAGES_DOMAIN,
-  // },
-
+  env: {
+    API_URL: 'https://spu-strapi.apptr1.com',
+  },
+  
   images:{
     deviceSizes:[640,768,1024,1280,1600],
     ImageSizes:[16,32,48,64,96],

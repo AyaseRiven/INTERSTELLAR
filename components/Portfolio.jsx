@@ -14,7 +14,7 @@ const Portfolio = () => {
 
   return (
     <div className='max-w-[1240px] mx-auto py-16 text-center'>
-      <h1 className='font-bold text-2xl p-4'>Travel Photos</h1>
+      <h1 className='font-bold text-4xl p-4'>Travel Photos</h1>
       <div className='grid grid-rows-none md:grid-cols-5 p-4 gap-4'>
 
         {/* image-full */}

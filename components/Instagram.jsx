@@ -5,8 +5,6 @@ import dynamic from 'next/dynamic';
 import React, { useEffect, useState } from 'react';
 import { FaInstagram } from 'react-icons/fa';
 
-
-
 const LightGallery = dynamic(() => import('lightgallery/react'), {
   ssr: false
 });
@@ -45,14 +43,15 @@ const Instagram = () => {
 
         {/* Image API  */}
         {attractions.map(attraction => (
-
+       
           <LightGallery mode="lg-fade" plugins={[lgZoom]}>
+            {/* <h1>The value of customKey is: {process.env.API_URL}</h1> */}
             <a className="gallery-item"
-              data-src={"https://spu-strapi.apptr1.com" + attraction.attributes.url}
+              data-src={process.env.API_URL + attraction.attributes.url}
               data-sub-html="<h4>Photo by - GGreviews</h4>"
             >
               <div className=' relative'>
-                <Image src={"https://spu-strapi.apptr1.com" + attraction.attributes.url} width={300} height={100} alt='/' layout=' resposive' />
+                <Image src={process.env.API_URL + attraction.attributes.url} width={300} height={100} alt='/' layout=' resposive' />
                 {/* Overlay */}
                 <div className='flex justify-center items-center absolute top-0 left-0 right-0 bottom-0 hover:bg-black/50 group'>
                   <p className=' text-gray-300 hidden group-hover:block'>
@@ -62,7 +61,9 @@ const Instagram = () => {
               </div>
             </a>
           </LightGallery>
+          
         ))}
+        
       </div>
     </div>
   )

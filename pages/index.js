@@ -7,10 +7,7 @@ import Instagram from '../components/Instagram';
 import Footer from '../components/Footer';
 import React from 'react';
 
-
 export default function Home() {
-
-  // console.log(attractions[0].id)
 
   return (
     <div>
@@ -22,7 +19,6 @@ export default function Home() {
       <Hero heading='INTERSTELLAR' message=' With humanity teetering on the brink of extinction, a group of astronauts travels through a wormhole in search of another inhabitable planet. ' />
       <Slider slides={SliderData} />
       <Instagram />
-      
       <Footer />
     </div>
     
